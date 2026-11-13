@@ -2,6 +2,7 @@ import React, { Suspense } from 'react';
 import { Routes, Route } from 'react-router';
 import PeopleLayout from './PeopleLayout';
 import Skeleton from './components/Skeleton';
+import ForumChannelView from './components/ForumChannelView';
 import './App.css';
 
 // Tải lazy component PersonDetail
@@ -27,6 +28,9 @@ function App() {
           } 
         />
       </Route>
+
+      {/* Route Forum */}
+      <Route path="/forum" element={<ForumChannelView />} />
     </Routes>
   );
 }
